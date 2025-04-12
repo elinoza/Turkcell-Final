@@ -58,12 +58,18 @@ https://coinmarketcap.com/
 
 ## Adımlar
 
--boilerplate, kurulumlar,component yapıları, dosya yapıları.
--eslint config yapıldı, extention indirildi.
--next i18n ...
--store,dil desteği,sass, bootstrap,formik yup,
--firebase yapısı, api entegrasyonu
--dark-light mod en iyi kullanım kararı
-
--
--
+- boilerplate, kurulumlar,component yapıları, dosya yapıları.
+- eslint config yapıldı, extention indirildi.
+- next i18n ...
+- store,dil desteği,sass, bootstrap,formik yup,
+- firebase yapısı, api entegrasyonu
+- dark-light mod en iyi kullanım kararı
+- zustand theme toggler,
+- buttonları kalıtım metodu ile oluşturma,
+- ikon için api bulma
+- sayfaları belirleme ve routing yapma
+- bootstrap renklerin override halinin yazılması
+- auth ve home pagelerin yapımı
+- tradeview grafiklerin importu
+- sayfaların pixel perfect hale getirilmesi
+- diğer sayfalar
