@@ -5,5 +5,14 @@
   },
   "Metadata": {
     "title": "Rockie - Kripto Para Borsası"
+  },
+  "Navbar": {
+    "HOME_PAGE": "Home Page",
+    "BUY_CRIPTO": "Buy Cripto",
+    "MARKETS": "Markets",
+    "EXCHANGE": "Exchange",
+    "SPOT": "Spot",
+    "BITUSDT": "BitUsdt",
+    "PAGES": "Pages"
   }
 }

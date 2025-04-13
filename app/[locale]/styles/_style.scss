@@ -1,42 +1,42 @@
-// :root {
-//   --background: #ffffff;
-//   --foreground: #171717;
-// }
+$decorative-color-start: #383fde;
+$decorative-color-end: #8444d4;
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --background: #0a0a0a;
-//     --foreground: #ededed;
-//   }
-// }
+@mixin typography($font-size-factor, $line-height-factor) {
+  font-size: $font-size-base * $font-size-factor;
+  line-height: $line-height-base * $line-height-factor;
+}
 
-// html,
-// body {
-//   max-width: 100vw;
-//   overflow-x: hidden;
-// }
+.body2 {
+  @include typography(0.9, 1.111);
+}
 
-// body {
-//   color: var(--foreground);
-//   background: var(--background);
-//   font-family: Arial, Helvetica, sans-serif;
-//   -webkit-font-smoothing: antialiased;
-//   -moz-osx-font-smoothing: grayscale;
-// }
+.body3 {
+  @include typography(0.8, 1.071);
+}
 
-// * {
-//   box-sizing: border-box;
-//   padding: 0;
-//   margin: 0;
-// }
+.caption1 {
+  @include typography(0.7, 1.224);
+}
 
-// a {
-//   color: inherit;
-//   text-decoration: none;
-// }
+.caption2 {
+  @include typography(0.6, 1.19);
+}
 
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-// }
+.bg-decorative {
+  background: linear-gradient(
+    to top right,
+    $decorative-color-start,
+    $decorative-color-end
+  );
+  color: $body-bg;
+  border: none;
+
+  &:hover {
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.btn {
+  color: white !important; //TODO: sorunu çöz
+}
