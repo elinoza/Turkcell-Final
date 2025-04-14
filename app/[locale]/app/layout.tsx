@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import NavBar from "../components/templates/NavBar";
 
 export async function generateMetadata({
   params,
@@ -25,7 +24,6 @@ export default async function RootLayout({
   return (
     <html >
       <body >
-   <NavBar/>
        {children}
       </body>
     </html>

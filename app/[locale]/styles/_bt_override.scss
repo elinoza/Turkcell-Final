@@ -52,29 +52,21 @@ $input-btn-font-size-sm: $font-size-sm;
 $input-btn-font-size-lg: $font-size-lg;
 $btn-font-weight: $font-weight-bold;
 $btn-line-height: 1rem;
+// $btn-padding-y: 1rem;
+// $btn-padding-x:17px;
 
-$spacer: 1rem; // 1rem = 16px (bu varsayımı kullanıyoruz)
+$spacer: 1rem;
 $spacers: (
   0: 0,
   1: $spacer * 0.25,
-  // 0.25rem = 4px
   2: $spacer * 0.5,
-  // 0.5rem = 8px
   3: $spacer,
-  // 1rem = 16px
   4: $spacer * 1.5,
-  // 1.5rem = 24px
   5: $spacer * 2,
-  // 2rem = 32px
   6: $spacer * 2.5,
-  // 2.5rem = 40px
   7: $spacer * 3,
-  // 3rem = 48px
   8: $spacer * 3.5,
-  // 3.5rem = 56px
   9: $spacer * 4,
-  // 4rem = 64px
   10: $spacer * 0.75,
-  // 0.75rem = 12px
 );
 

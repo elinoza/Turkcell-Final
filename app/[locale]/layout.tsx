@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { DM_Sans } from "next/font/google";
 import "./styles/main.scss";
+import NavBar from "./components/templates/NavBar";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -39,7 +40,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${dmSans.className}`}>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider> <NavBar/>{children}</NextIntlClientProvider>
       </body>
     </html>
   );
