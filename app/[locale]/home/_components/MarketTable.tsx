@@ -43,41 +43,46 @@ const marketData : MarketDataItem[]= [
   }
 ];
 
-function MarketTable() {
-  const t =useTranslations("HomePage")
+type MarketTableProps = {
+  data: any[]; // şimdilik tip vermiyoruz
+};
+
+function MarketTable({ data }: MarketTableProps) {
+  const t = useTranslations("HomePage");
+
   return (
-    <>
-      <Table hover>
+    <Table hover>
       <thead>
         <tr>
-        <th className='body2 bold text-secondary'>#</th>
-          {marketCols.map((column) => (
-            <th key={column} className='body2 bold text-secondary'>{t(`market-cols.${column}`)}</th>
-          ))}
-          <th className='opacity-0'>Trade</th>
+          <th className="body2 bold text-secondary">#</th>
+          <th className="body2 bold text-secondary">{t("market-cols.name")}</th>
+          <th className="body2 bold text-secondary">{t("market-cols.last-price")}</th>
+          <th className="body2 bold text-secondary">{t("market-cols.market-cap")}</th>
+          <th className="body2 bold text-secondary">{t("market-cols.last-7-days")}</th>
+          <th className="body2 bold text-secondary">{t("market-cols.24h%")}</th>
+          <th className="opacity-0">Trade</th>
         </tr>
-   
       </thead>
       <tbody>
-        {marketData.map((row, rowIndex) => (
-          <tr key={rowIndex}>
-            <td className='body2 fw-bold'>{rowIndex}</td>
-            {marketCols.map((column) => (
-              <td key={column} className='body2 fw-bold'>
-            {  (column === 'last-7-days' )? (
-                <span>grafik</span>
-                ) : (
-                  row[column]
-                )}
-              </td>
-            ))}
-           <td><ButtonDefault className="btn btn-outline-secondary btn-sm ">Trade</ButtonDefault></td> 
+        {data.map((coin: any, i) => (
+          <tr key={coin.id}>
+            <td>{i + 1}</td>
+            <td>{coin.name}</td>
+            <td>${coin.quote?.USD?.price?.toFixed(2)}</td>
+            <td>${coin.quote?.USD?.market_cap?.toLocaleString()}</td>
+            <td>grafik</td>
+            <td>{coin.quote?.USD?.percent_change_24h?.toFixed(2)}%</td>
+            <td>
+              <ButtonDefault className="btn btn-outline-secondary btn-sm">
+                Trade
+              </ButtonDefault>
+            </td>
           </tr>
         ))}
       </tbody>
     </Table>
-    </>
   );
 }
+
 
 export default MarketTable;

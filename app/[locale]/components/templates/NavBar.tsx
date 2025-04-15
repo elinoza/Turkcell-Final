@@ -1,6 +1,4 @@
 "use client";
-import React from "react";
-import { useEffect} from "react";
 import { useTranslations } from "next-intl";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -10,7 +8,7 @@ import { useNavigation } from "../../../../utils/navigation";
 import { usePathname } from "@/i18n/navigation";
 import { ROUTE } from "../../../../constants/index";
 import clsx from "clsx";
-import ProfileIcon from "./ProfileIcon";
+import Avatar from "./Avatar";
 import Icon from "@/app/_components/ui/Icon";
 import ButtonDefault from "@/app/_components/ui/Buttons/ButtonDefault";
 import { useThemeStore } from "../../store/ThemeStore";
@@ -29,26 +27,20 @@ function NavBar() {
     goToProfile,
   } = useNavigation();
   const pathname = usePathname();
+  const { theme, setTheme } = useThemeStore();
 
   
-  // const [theme, setTheme] = useState<"light" | "dark">("light");
-  const {theme,setTheme} =useThemeStore()
-
-  useEffect(() => {
-    const isDarkPreffered = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    const newTheme = isDarkPreffered ? "dark" : "light";
-    setTheme(newTheme);
-  }, [setTheme]);
-
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
   };
 
   return (
-    <Navbar expand="xl" className="bg-transparent py-0 my-0"  style={{ minHeight: "50px" }}>
+    <Navbar
+      expand="xl"
+      className="bg-transparent py-0 my-0"
+      style={{ minHeight: "50px" }}
+    >
       <Container fluid>
         <Navbar.Brand className="p-0">
           <Logo />
@@ -60,7 +52,7 @@ function NavBar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-             <Nav.Link
+            <Nav.Link
               onClick={goToHomePage}
               className={clsx(
                 pathname === ROUTE.HOME_PAGE && "bg-primary text-content-100"
@@ -128,7 +120,8 @@ function NavBar() {
             <Nav.Link
               onClick={goToOrdersTrades}
               className={clsx(
-                pathname === ROUTE.ORDERS_TRADES && "bg-primary text-content-100"
+                pathname === ROUTE.ORDERS_TRADES &&
+                  "bg-primary text-content-100"
               )}
             >
               {t("ORDERS_TRADES")}
@@ -137,12 +130,15 @@ function NavBar() {
             <Nav.Link>{t("CURRENCY")}</Nav.Link>
 
             <Nav.Link onClick={toggleTheme}>
-              {theme === "light" ?  <Icon name="sun" className="border-start border-end px-2" />:
-              <Icon name="moon" className="border-start border-end px-2" /> }
+              {theme === "light" ? (
+                <Icon name="sun" className="border-start border-end px-2" />
+              ) : (
+                <Icon name="moon" className="border-start border-end px-2" />
+              )}
             </Nav.Link>
 
             <Nav.Link>
-              <Icon name="bell"  />
+              <Icon name="bell" />
             </Nav.Link>
 
             <Nav.Link>
@@ -157,7 +153,7 @@ function NavBar() {
                 pathname === ROUTE.PROFILE && "bg-primary text-content-100"
               )}
             >
-              <ProfileIcon />
+              <Avatar imgUrl="/IMG.svg" />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
