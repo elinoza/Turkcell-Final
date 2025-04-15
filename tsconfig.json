@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/[locale]/store/index.ts"
+    "app/[locale]/store/ThemeStore.ts"
   ],
   "exclude": ["node_modules"]
 }

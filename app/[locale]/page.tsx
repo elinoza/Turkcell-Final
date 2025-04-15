@@ -16,7 +16,7 @@ export default function Home() {
       <Button variant="secondary2">Button</Button>
       <Button size="lg">Button</Button>
       <Button size="sm">Button</Button>
-      <Icon name="check" />
+      <Icon name="bell" />
     </div>
   );
 }

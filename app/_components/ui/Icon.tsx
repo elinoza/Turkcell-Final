@@ -5,8 +5,8 @@ import clsx from "clsx";
 
 const Icon = ({
   name,
-  size = "14",
-  className = "text-secondary",
+  size,
+  className = "",
 }: IconProps) => {
   const iconSVG = ICONS[name];
 
@@ -14,8 +14,13 @@ const Icon = ({
     <NotFound />
   ) : (
     <span
-      className={clsx("d-inline-block", className)}
-      style={{ width: `${size}px`, height: `${size}px` }}
+      className={clsx("icon centered-aligned-flex-row m-0 p-0 text-green", className)}
+      style={
+        size
+          ? { width: `${size}px`, height: `${size}px`,  color: "var(--bs-body-color)",
+            fill: "var(--bs-body-color)",  }
+          : { fill: "var(--bs-body-color)"}
+      }
     >
       {iconSVG}
     </span>

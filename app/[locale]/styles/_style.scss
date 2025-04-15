@@ -6,6 +6,20 @@ $decorative-color-end: #8444d4;
   line-height: $line-height-base * $line-height-factor;
 }
 
+
+[data-bs-theme="dark"] .bg-surface {
+  background-color: $dark-hover!important;
+}
+
+[data-bs-theme="dark"] .text-secondary {
+  color:$light!important
+}
+
+p{
+  padding:0px!important;
+  margin:0px!important;
+}
+
 .body2 {
   @include typography(0.9, 1.111);
 }
@@ -35,4 +49,23 @@ $decorative-color-end: #8444d4;
     opacity: 0.9;
     transition: opacity 0.3s ease;
   }
+}
+
+.centered-aligned-flex-row{
+  justify-content: center;
+  align-items:center;
+  display:flex
+}
+
+.line{
+background-color: var(--bs-border-color);
+}
+
+.icon{
+  color:var(--bs-body-color)!important
+}
+
+tr:hover .btn {
+  background-color: $primary!important; 
+  color: $main-surface!important;
 }

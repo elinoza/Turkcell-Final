@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import { DM_Sans } from "next/font/google";
 import "./styles/main.scss";
 import NavBar from "./components/templates/NavBar";
+import Footer from "./components/templates/Footer";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -40,7 +41,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${dmSans.className}`}>
-        <NextIntlClientProvider> <NavBar/>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider> <NavBar/>{children}<Footer/></NextIntlClientProvider>
       </body>
     </html>
   );

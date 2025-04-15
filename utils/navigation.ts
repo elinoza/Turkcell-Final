@@ -15,9 +15,6 @@ export const useNavigation = () => {
     goToPages: () => router.push(ROUTE.PAGES),
     goToAssets: () => router.push(ROUTE.ASSETS),
     goToOrdersTrades: () => router.push(ROUTE.ORDERS_TRADES),
-    goToENUSD: () => router.push(ROUTE.EN_USD),
-    goToTheme: () => router.push(ROUTE.THEME),
-    goToWalletIcon: () => router.push(ROUTE.WALLET_ICON),
-    goToUserIcon: () => router.push(ROUTE.USER_ICON),
+    goToProfile: () => router.push(ROUTE.PROFILE),
   };
 };

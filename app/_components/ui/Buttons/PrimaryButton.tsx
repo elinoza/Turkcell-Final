@@ -6,12 +6,12 @@ export type ButtonProps = {
   className?: string;
 } &React.ButtonHTMLAttributes<HTMLButtonElement>
 
-const ButtonDefault = ({ children, className, ...props }: ButtonProps) => {
+const PrimaryButton = ({ children, className, ...props }: ButtonProps) => {
   return (
-    <BaseButton className={clsx(className)} {...props}>
+    <BaseButton className={clsx(className, "btn-primary")} {...props}>
       {children}
     </BaseButton>
   );
 };
 
-export default ButtonDefault;
+export default PrimaryButton;

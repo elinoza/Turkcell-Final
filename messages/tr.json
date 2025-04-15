@@ -1,18 +1,166 @@
 {
   "HomePage": {
-    "title": "Merhaba Dünya!",
-    "about": "Hakkımızda sayfasına git"
+    "title": "Merhaba dünya!",
+    "about": "Hakkında sayfasına git",
+    "slider": {
+      "title": "Dijital Varlıkları Roketle Al & Sat",
+      "content": "Coin rocket, kripto varlık alış ve satış işlemleri için en kolay, en güvenli ve en hızlı yoldur.",
+      "start-button": "Hemen başla",
+      "partners": "Ortaklarımız"
+    },
+    "Crypto-list": {
+      "CRYPTO": "Kripto",
+      "DEFI": "DeFi",
+      "BSC": "BSC",
+      "NFT": "NFT",
+      "METAVERSE": "Metaverse",
+      "POLKADOT": "Polkadot",
+      "SOLANS": "Solans",
+      "OPENSEAS": "Openseas",
+      "MAKERSPLACE": "Makersplace"
+    },
+    "market-title": "Piyasa Güncellemesi",
+    "market-navs": {
+      "view-all": "Tümünü Görüntüle",
+      "metaverse": "Metaverse",
+      "entertainment": "Eğlence",
+      "energy": "Enerji",
+      "nft": "NFT",
+      "gaming": "Oyun",
+      "music": "Müzik"
+    },
+    "market-cols": {
+      "name": "İsim",
+      "last-price": "Son Fiyat",
+      "24h%": "24s %",
+      "market-cap": "Piyasa Değeri",
+      "last-7-days": "Son 7 Gün",
+      "trade": "Ticaret"
+    },
+    "How-it-works": {
+      "step1": {
+        "step": "Adım 1",
+        "title": "İndir",
+        "content": "Stacks, React Native ile oluşturulmuş üretime hazır bir içerik blokları kütüphanesidir."
+      },
+      "step2": {
+        "step": "Adım 2",
+        "title": "İndir",
+        "content": "Stacks, React Native ile oluşturulmuş üretime hazır bir içerik blokları kütüphanesidir."
+      },
+      "step3": {
+        "step": "Adım 3",
+        "title": "Ticarete Başla",
+        "content": "Stacks, React Native ile oluşturulmuş üretime hazır bir içerik blokları kütüphanesidir."
+      },
+      "step4": {
+        "step": "Adım 4",
+        "title": "Para Kazan",
+        "content": "Stacks, React Native ile oluşturulmuş üretime hazır bir içerik blokları kütüphanesidir."
+      }
+    },
+    "rockie": {
+      "title": "Rockie Nedir",
+      "description": "Bitcost'ta çeşitli ticaret deneyimleri yaşayın. Spot Ticaret, Vadeli İşlem, P2P, Stake Etme, Madencilik ve Marjin gibi çeşitli kripto işlemleri yapabilirsiniz.",
+      "features": {
+        "realtimePrices": {
+          "title": "Gerçek zamanlı kripto para fiyatlarını görüntüleyin",
+          "description": "Bitcost'ta çeşitli ticaret deneyimleri yaşayın. Spot Ticaret, Vadeli İşlem, P2P, Stake Etme, Madencilik ve Marjin gibi çeşitli kripto işlemleri yapabilirsiniz."
+        },
+        "buySellCoins": {
+          "title": "BTC, ETH, XRP, OKB ve daha fazlasını alıp satın",
+          "description": "Bitcost'ta çeşitli ticaret deneyimleri yaşayın. Spot Ticaret, Vadeli İşlem, P2P, Stake Etme, Madencilik ve Marjin gibi çeşitli kripto işlemleri yapabilirsiniz."
+        }
+      },
+      "button": "Daha Fazla Keşfet"
+    },
+    "hero": {
+      "title": "Paranı Özgür Bırak & Güvenle Yatırım Yap",
+      "description": "Cryptor Trade ile ticaret becerilerinizi en iyi şekilde kullanın",
+      "features": {
+        "trade": {
+          "title": "Hareket Halindeyken Al, Sat ve Ticaret Yap",
+          "description": "Varlıklarınızı mobil cihazınızdan yönetin"
+        },
+        "control": {
+          "title": "Varlıklarının Kontrolü Senin Elinde",
+          "description": "Sadece senin fonlarına erişimin olduğundan emin ol"
+        }
+      },
+      "buttons": {
+        "google": "Google Play'den Al",
+        "apple": "App Store'dan İndir"
+      }
+    },
+    "testimonials": {
+      "title": "Müşterilerimiz Yaptığımız İşleri Seviyor",
+      "content": "Fikrinizi Finsweet ile Gerçeğe Dönüştürün",
+      "description": "Bir okuyucunun, sayfanın yerleşimini incelerken içeriğe odaklanmadan dikkatinin dağılması uzun zamandır bilinen bir gerçektir.",
+      "reviewsCount": "Müşteri Yorumları",
+      "testimonial": {
+        "quote": "Harika bir kurs, gerçekten çok beğendim ve kursun kod açıklamaları çok iyiydi, her şeyi kolayca anlayıp öğrendiklerimle uygulamalar geliştirebildim.",
+        "author": "Johnny Andro",
+        "position": "Direktör, Şirket",
+        "company": "logoipsum"
+      },
+      "cta": {
+        "title": "25$’a kadar kripto kazanın",
+        "subtitle": "Belirli kripto paraların nasıl çalıştığını keşfedin — ve her birinden biraz alarak kendiniz deneyin.",
+        "button": "Hesap Oluştur"
+      }
+    }
   },
   "Metadata": {
-    "title": "Rockie - Kripto Para Borsası"
+    "title": "Rockie - kripto"
   },
   "Navbar": {
-    "HOME_PAGE": "Home Page",
-    "BUY_CRIPTO": "Buy Cripto",
-    "MARKETS": "Markets",
-    "EXCHANGE": "Exchange",
+    "HOME_PAGE": "Ana Sayfa",
+    "BUY_CRIPTO": "Kripto Satın Al",
+    "MARKETS": "Piyasalar",
+    "EXCHANGE": "Borsa",
     "SPOT": "Spot",
-    "BITUSDT": "BitUsdt",
-    "PAGES": "Pages"
+    "BITUSDT": "BITUSDT",
+    "PAGES": "Sayfalar",
+    "ASSETS": "Varlıklar",
+    "ORDERS_TRADES": "Emirler & İşlemler",
+    "CURRENCY": "TR/TRY",
+    "WALLET": "Cüzdan"
+  },
+  "Footer": {
+    "talk-caption": "Haydi konuşalım! 🤙",
+    "tel-number": "+90 902 353 2926",
+    "mail": "sinahosseini379@gmail.com",
+    "copyright": "Telif Hakkı © 2022 Tüm Dünya İnsanlarına Ücretsiz",
+    "products": {
+      "caption": "ÜRÜNLER",
+      "spot": "Spot",
+      "usdtPerpetual": "USDT Vadeli",
+      "inversePerpetual": "Ters Vadeli",
+      "launchpad": "Launchpad",
+      "exchange": "Borsa"
+    },
+    "services": {
+      "caption": "HİZMETLER",
+      "buyCrypto": "Kripto Satın Al",
+      "referralProgram": "Referans Programı",
+      "affiliateProgram": "Ortaklık Programı",
+      "apiDocumentation": "API Dökümantasyonu"
+    },
+    "support": {
+      "caption": "DESTEK",
+      "helpCenter": "Yardım Merkezi",
+      "submitRequest": "Talep Gönder",
+      "authenticityCheck": "Kimlik Doğrulama",
+      "userFeedback": "Kullanıcı Geri Bildirimi",
+      "tradingFee": "İşlem Ücreti"
+    },
+    "aboutUs": {
+      "caption": "HAKKIMIZDA",
+      "aboutBybit": "Bybit Hakkında",
+      "bybitLearn": "Bybit Öğren",
+      "blog": "Blog",
+      "careers": "Kariyer",
+      "businessContacts": "İş İletişimleri"
+    }
   }
 }
