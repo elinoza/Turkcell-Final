@@ -6,7 +6,7 @@ const DownloadInfo = () => {
   const t = useTranslations("HomePage");
 
   return (
-    <section className="d-flex flex-column flex-xl-row align-items-center justify-content-between gap-5 py-5">
+    <section className="d-flex flex-column flex-xl-row align-items-center justify-content-between gap-5 py-3">
       <div className="d-flex flex-column gap-3 w-100 w-lg-50">
         <h2 className="fw-bold">
           {t("app.title")}

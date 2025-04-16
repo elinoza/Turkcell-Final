@@ -29,7 +29,6 @@ const MarketUpdate = () => {
     const fetchData = async () => {
       const res = await getMarketList();
       setMarketData(res?.data || []);
-      console.log(res?.data)
     };
 
     fetchData();

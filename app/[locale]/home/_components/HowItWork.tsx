@@ -7,13 +7,12 @@ const HowItWorks = () => {
   const t = useTranslations("HomePage.How-it-works");
 
   return (
-    <section className="text-center py-5">
-      <h2 className="fw-bold">How It Works</h2>
+    <section className="text-center py-9">
+      <div className="py-6">  <h2 className="fw-bold">How It Works</h2>
       <p className="text-secondary mb-5">
         Stacks is a production-ready library of stackable content blocks built in React Native.
-      </p>
-
-      <Row className="justify-content-center g-4">
+      </p></div>
+      <Row className="justify-content-center">
         {HOW_IT_WORKS_STEPS.map(({ key, icon }) => (
           <Col
             key={key}

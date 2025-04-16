@@ -10,7 +10,7 @@ const Slider = () => {
   const {theme} =useThemeStore()
   return (
     <div className="d-flex pb-3">
-    <div className="d-flex flex-column gap-7 pt-9 w-50">
+    <div className="d-flex flex-column gap-7 pt-9 w-75 w-xl-50">
       <div className="d-flex flex-column gap-2 align-items-start justify-content between">
         <h1>{t("slider.title")}</h1>
         <p className="text-secondary mb-4">{t("slider.content")}</p>
@@ -25,16 +25,16 @@ const Slider = () => {
         </div>
       </div>
     </div>
-    <div className="d-flex align-items-end justify-content-end  d-md-flex w-50">
+    <div className="d-flex align-items-end justify-content-end  d-none d-xl-flex w-50">
     {theme === "light" ? (
         <Image src="/slider.svg" alt="slider-bg-img"  width="570"
-        height="448" />
+        height="448"  />
       ) : (
         <Image
           src="/slider-dark.svg"
           alt="slider-bg-img"
-       
-          className="w-100 h-auto" fill
+       width="570"
+        height="448"
         />
       )}
     </div>

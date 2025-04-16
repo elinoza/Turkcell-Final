@@ -5,8 +5,8 @@ import HeaderTop from "./HeaderTop";
 const Footer = () => {
   return (
     <footer className="body3">
-        <HeaderTop/>
-       <HeaderBottom/>
+      <HeaderTop />
+      <HeaderBottom />
     </footer>
   );
 };

@@ -5,7 +5,7 @@ import SocialIcons from "./SocialIcons";
 const HeaderBottom = () => {
   const t = useTranslations("Footer");
   return (
-    <div className="bg-surface py-3">
+    <div className="bg-surface py-1 fixed-bottom">
       <Container className="d-flex justify-content-between align-items-center">
         {" "}
         <div>{t("copyright")}</div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Icon from "@/app/_components/ui/Icon";
 import PrimaryButton from "@/app/_components/ui/Buttons/PrimaryButton";
 
-const About = () => {
+const Rockie = () => {
   const t = useTranslations("HomePage");
 
   return (
@@ -16,11 +16,11 @@ const About = () => {
           height={450}
         />
       </div>
-      <div className="d-flex flex-column gap-3">
+      <div className="d-flex flex-column gap-3 ps-9">
         <h2 className="fw-bold">{t("rockie.title")}</h2>
         <p className="text-secondary">{t("rockie.description")}</p>
 
-        <div className="d-flex flex-column gap-3 mt-3">
+        <div className="d-flex flex-column">
     
           <div className="d-flex gap-3 align-items-start">
             <Icon name="check" className="text-primary mt-1"/>
@@ -38,12 +38,12 @@ const About = () => {
           </div>
         </div>
 
-        <div className="mt-4">
-          <PrimaryButton className="px-4 py-3">{t("rockie.button")}</PrimaryButton>
+        <div className="mt-3">
+          <PrimaryButton className="px-7 py-3">{t("rockie.button")}</PrimaryButton>
         </div>
       </div>
     </div>
   );
 };
 
-export default About;
+export default Rockie;

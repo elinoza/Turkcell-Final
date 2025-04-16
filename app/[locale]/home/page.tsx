@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap";
 import MarketUpdate from "./_components/MarketUpdate";
 import Testimonials from "./_components/Testimonials";
 import HowItWorks from "./_components/HowItWork";
-import InstallingApp from "./_components/WhatIsRockie";
+import Rockie from "./_components/WhatIsRockie";
 import DownloadInfo from "./_components/DownloadInfo";
 import CallToAction from "./_components/CallToAction";
 
@@ -30,19 +30,19 @@ const page = () => {
           <HowItWorks />
         </Container>
       </section>
-      <section className="py-5 my-4">
+      <section className="py-9 my-4">
         <Container>
-          <Testimonials />
-        </Container>
-      </section>
-      <section className="py-5 my-4">
-        <Container>
-          <InstallingApp />
+          <Rockie />
         </Container>
       </section>
       <section className="py-5 my-4">
         <Container>
           <DownloadInfo />
+        </Container>
+      </section>
+      <section className="py-5 my-4">
+        <Container>
+          <Testimonials />
         </Container>
       </section>
       <section>
