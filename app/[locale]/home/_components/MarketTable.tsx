@@ -1,57 +1,34 @@
 import ButtonDefault from "@/app/_components/ui/Buttons/ButtonDefault";
 import Icon from "@/app/_components/ui/Icon";
+import { CoinData } from "@/constants/types";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
-import React from "react";
+import Image from "next/image";
+import React, { useState } from "react";
 import Table from "react-bootstrap/Table";
 
-export type MarketDataItem = {
-  name: string;
-  "last-price": string;
-  "market-cap": string;
-  "last-7-days": string;
-  "24h%": string;
-};
-
-const marketCols: (keyof MarketDataItem)[] = [
+const marketCols: string[] = [
   "name",
   "last-price",
+  "24h%",
   "market-cap",
   "last-7-days",
-  "24h%",
+  
 ];
 
-const marketData: MarketDataItem[] = [
-  {
-    name: "Bitcoin",
-    "last-price": "$40,000",
-    "market-cap": "$800B",
-    "last-7-days": "2%",
-    "24h%": "5%",
-  },
-  {
-    name: "Ethereum",
-    "last-price": "$2,800",
-    "market-cap": "$300B",
-    "last-7-days": "1%",
-    "24h%": "3%",
-  },
-  {
-    name: "Dogecoin",
-    "last-price": "$0.50",
-    "market-cap": "$70B",
-    "last-7-days": "5%",
-    "24h%": "10%",
-  },
-];
 const myFavoriteCoins: string[] = ["BTC"];
 
-type MarketTableProps = {
-  data: any[]; // şimdilik tip vermiyoruz
-};
-
-function MarketTable({ data }: MarketTableProps) {
+function MarketTable({ data }:{ data:any}) {
+  const [favoriteCoins,setFavoriteCoins]=useState<string[]>(myFavoriteCoins)
   const t = useTranslations("HomePage");
+
+  const toggleFavorite = (isFavorite: boolean, coinSymbol: string) => {
+    if (isFavorite) {
+      setFavoriteCoins(prev => prev.filter((item) => item !== coinSymbol));
+    } else {
+      setFavoriteCoins(prev => [...prev, coinSymbol]);
+    }
+  };
 
   return (
     <Table hover responsive className="body2">
@@ -59,33 +36,43 @@ function MarketTable({ data }: MarketTableProps) {
         <tr>
           <th className="opacity-0">Favorite</th>
           <th className="text-secondary">#</th>
-          <th className="text-secondary className='me-9'">
-            {t("market-cols.name")}
-          </th>
-          <th className="text-secondary ms-9 text-end">
-            {t("market-cols.last-price")}
-          </th>
-          <th className="text-secondary text-end">{t("market-cols.24h%")}</th>
-          <th className="text-secondary text-end">
-            {t("market-cols.market-cap")}
-          </th>
-          <th className="text-secondary text-end">
-            {t("market-cols.last-7-days")}
-          </th>
+          {marketCols.map((column)=>
+          <th  key={column}
+          className={clsx(
+            "text-secondary",
+            column !== "name" && "text-end"
+          )}>
+            {t(`market-cols.${column}`)}
+          </th>)}
           <th className="opacity-0">Trade</th>
         </tr>
       </thead>
       <tbody>
-        {data.map((coin: any, i) => {
-          const isFavorite = myFavoriteCoins.includes(coin.symbol);
+        {data.map((coin: CoinData, i:number) => {
+          const isFavorite = favoriteCoins.includes(coin.symbol);
 
           return (
             <tr key={coin.id}>
               <td className="align-middle">
-                <Icon name={isFavorite ? "favorite" : "nonfavorite"} />
+                <Icon name={isFavorite ? "favorite" : "nonfavorite"} onClick={()=>toggleFavorite(isFavorite,coin.symbol)}/>
               </td>
               <td>{i + 1}</td>
-              <td>
+              <td className="d-flex gap-1 align-items-center ">
+              <span
+                    className="rounded-circle crypto-icon d-inline overflow-hidden bg-secondary2 d-flex justify-content-center align-items-center"
+                    
+                  >
+                    <Image
+                      src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${coin.id}.png`}
+                      alt={`${coin.symbol} logo`}
+                      width={24}
+                      height={24}
+                      className="w-100 h-100"
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                      }}
+                    />
+                  </span>
                 <span className="pe-2 border-end fw-bold">{coin.name}</span>
                 <span className="ps-2 text-secondary caption1 fw-bold">
                   {coin.symbol}

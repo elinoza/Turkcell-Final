@@ -1,9 +1,31 @@
-import Image from 'next/image'
+import Image from "next/image";
+import clsx from "clsx";
 
-const Avatar = ({imgUrl}:{imgUrl:string}) => {
+type AvatarProps = {
+  imgUrl?: string;
+  size?: number; 
+  className?: string;
+};
+
+const Avatar = ({ imgUrl, size = 30, className }: AvatarProps) => {
   return (
-    <span className='centered-aligned-flex-row rounded-circle overflow-hidden '>{imgUrl ?<Image src={imgUrl} alt="profile-img" width="30" height="30" />:  <span className="rounded-circle bg-secondary" style={{ width: 24, height: 24 }}></span>}</span>
-  )
-}
+    <span
+      className={clsx("d-inline-flex justify-content-center align-items-center rounded-circle overflow-hidden", className)}
+      style={{ width: size, height: size }}
+    >
+      {imgUrl ? (
+        <Image
+          src={imgUrl}
+          alt="profile-img"
+          width={size}
+          height={size}
+          className="w-100 h-100 object-fit-cover"
+        />
+      ) : (
+        <span className="rounded-circle bg-secondary2" style={{ width: size, height: size }} />
+      )}
+    </span>
+  );
+};
 
-export default Avatar
+export default Avatar;

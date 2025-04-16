@@ -6,18 +6,26 @@ $decorative-color-end: #8444d4;
   line-height: $line-height-base * $line-height-factor;
 }
 
+.call-to-action{
+  background-color:$primary!important
+}
 
 [data-bs-theme="dark"] .bg-surface {
-  background-color: $dark-hover!important;
+  background-color: $dark-surface !important;
 }
+
+[data-bs-theme="dark"] .quote-card,.call-to-action {
+  background-color: $dark-surface;
+}
+
 
 [data-bs-theme="dark"] .text-secondary {
-  color:$light!important
+  color: $light !important;
 }
 
-p{
-  padding:0px!important;
-  margin:0px!important;
+p {
+  padding: 0px !important;
+  margin: 0px !important;
 }
 
 .body2 {
@@ -50,22 +58,43 @@ p{
     transition: opacity 0.3s ease;
   }
 }
+.divider{
+  width:12px;
+}
 
-.centered-aligned-flex-row{
+.quote{
+  right:40px;
+  top:10px
+}
+
+.centered-aligned-flex-row {
   justify-content: center;
-  align-items:center;
-  display:flex
+  align-items: center;
+  display: flex;
 }
 
-.line{
-background-color: var(--bs-border-color);
+.line {
+  background-color: var(--bs-border-color);
 }
 
-.icon{
-  color:var(--bs-body-color)!important
+.icon {
+  color: var(--bs-body-color) !important;
 }
 
 tr:hover .btn {
-  background-color: $primary!important; 
-  color: $main-surface!important;
+  background-color: $primary !important;
+  color: $main-surface !important;
+}
+.crypto-card {
+  min-width: "320px";
+  flex-shrink: 0;
+  scroll-snap-type: "x mandatory";
+  scrollbar-width: "none";
+}
+.crypto-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.search-input{
+outline:none!important
 }

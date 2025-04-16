@@ -5,13 +5,15 @@ import NavList from "./NavList";
 import { useTranslations } from "next-intl";
 import MarketTable from "./MarketTable";
 import { getMarketList } from "@/app/utils/queries";
-import ButtonDefault from "@/app/_components/ui/Buttons/ButtonDefault";
 import LinkButton from "@/app/_components/ui/Buttons/LinkButton";
+import SearchInput from "@/app/_components/ui/SearchInput";
+import { Col, Row } from "react-bootstrap";
 
 const MarketUpdate = () => {
   const t = useTranslations("HomePage");
   const [selectedKey, setSelectedKey] = useState<string>("view-all");
-  const [marketData, setMarketData] = useState<any[]>([]); // tip vermiyoruz şimdilik
+  const [marketData, setMarketData] = useState<any[]>([]);
+  const [search, setSearch] = useState<string>("");
 
   const marketNavs = [
     "view-all",
@@ -29,31 +31,44 @@ const MarketUpdate = () => {
       setMarketData(res?.data || []);
       console.log(res?.data)
     };
- 
 
     fetchData();
   }, []);
 
+  const filteredData = marketData.filter((coin) =>
+    coin.name.toLowerCase().includes(search.toLowerCase()) ||
+    coin.symbol.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
     <div className="d-flex justify-content-center flex-column gap-5">
       <div className="d-flex justify-content-between align-items-center">
-      <h2>{t("market-title")}</h2>
- <LinkButton>See All Coins</LinkButton>
+        <h2>{t("market-title")}</h2>
+        <LinkButton>See All Coins</LinkButton>
       </div>
-   
-      <div className="d-flex align-items-center justify-content-start py-3 flex-wrap">
-        {marketNavs.map((item) => (
-          <NavList
-            key={item}
-            parentKey="market-navs"
-            location="HomePage"
-            item={item}
-            selectedKey={selectedKey}
-            setSelectedKey={setSelectedKey}
-          />
-        ))}
-      </div>
-      <MarketTable data={marketData} />
+
+      <Row>
+        <Col  className="d-flex align-items-center flex-wrap gap-2 d-inline">
+          {marketNavs.map((item) => (
+            <NavList
+              key={item}
+              parentKey="market-navs"
+              location="HomePage"
+              item={item}
+              selectedKey={selectedKey}
+              setSelectedKey={setSelectedKey}
+            />
+          ))}
+        </Col>
+        <Col sm={2} lg={3}> <SearchInput
+        className="d-inline-block"
+          placeholder="Search coin..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        /></Col>
+      </Row>
+
+      <MarketTable data={filteredData} />
     </div>
   );
 };

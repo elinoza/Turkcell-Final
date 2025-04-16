@@ -156,5 +156,18 @@ $table-hover-bg:              rgba($primary, $table-hover-bg-factor);
 $btn-link-color:var(--bs-body-color);
 $btn-link-hover-color:        var(--bs-body-hover-color);
 
+// $input-btn-focus-width:         $focus-ring-width;
+// $input-btn-focus-color-opacity: $focus-ring-opacity;
+// $input-btn-focus-color:         none;
+// $input-btn-focus-blur:          $focus-ring-blur;
+// $input-btn-focus-box-shadow:    none;
 
 
+
+$container-max-widths: (
+  sm: 440px,
+  md: 620px,
+  lg: 890px,
+  xl: 1040px,
+  xxl: 1076px
+);

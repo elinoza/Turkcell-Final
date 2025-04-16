@@ -1,10 +1,11 @@
 "use client";
 
-import { Container } from "react-bootstrap";
+import { Container} from "react-bootstrap";
 import { useEffect, useState } from "react";
 import CryptoCard from "./CryptoCard";
 import NavList from "./NavList";
 import { getMarketList } from "@/app/utils/queries";
+import { CoinData } from "@/constants/types";
 
 const Crypto = () => {
   const [selectedKey, setSelectedKey] = useState<string>("CRYPTO");
@@ -26,7 +27,6 @@ const Crypto = () => {
     const fetchData = async () => {
       const res = await getMarketList();
       setMarketData(res?.data || []);
-      console.log("crypto", res?.data);
     };
 
     fetchData();
@@ -46,11 +46,16 @@ const Crypto = () => {
           />
         ))}
       </div>
-      <div className="d-flex flex-nowrap gap-3 py-4">
-  {marketData.slice(0,4).map((coin) => (
-    <CryptoCard key={coin.id} coin={coin} />
-  ))}
-</div>
+      <div
+        className="d-flex flex-row gap-3 py-4 overflow-auto"
+        style={{ scrollbarWidth: "none" }}
+      >
+        {marketData.slice(0, 10).map((coin:CoinData) => (
+          <div key={coin.id} className="crypto-card">
+            <CryptoCard coin={coin} />
+          </div>
+        ))}
+      </div>
 
     </Container>
   );

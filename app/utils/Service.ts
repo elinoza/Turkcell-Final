@@ -1,4 +1,4 @@
-const fetchService = async <T = unknown, B = unknown>(
+const fetchService = async <T = any, B = any>(
   url: string,
   method: "GET" | "POST" | "PUT" | "DELETE" = "GET",
   body :B | null =null,
