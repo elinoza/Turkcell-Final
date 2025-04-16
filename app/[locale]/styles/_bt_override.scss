@@ -73,6 +73,8 @@ $btn-line-height: 1rem;
   display:flex!important;
   justify-content:center!important;
   align-items:center!important;
+  padding-left:0px!important;
+  padding-right:0px!important
 }
 .btn-outline-dark {
   border-color: var(--bs-body-color)!important
@@ -115,7 +117,7 @@ $border-radius:              1.5rem;
 // $border-radius-pill:          50rem;
 
 
-$table-cell-padding-y:        1.5rem;
+$table-cell-padding-y:        1.60rem;
 // $table-cell-padding-x:        .5rem;
 // $table-cell-padding-y-sm:     .25rem;
 // $table-cell-padding-x-sm:     .25rem;
@@ -165,9 +167,9 @@ $btn-link-hover-color:        var(--bs-body-hover-color);
 
 
 $container-max-widths: (
-  sm: 440px,
-  md: 620px,
-  lg: 890px,
-  xl: 1040px,
-  xxl: 1076px
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1130px,
+  xxl: 1423px
 );

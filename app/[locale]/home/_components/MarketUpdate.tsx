@@ -41,14 +41,13 @@ const MarketUpdate = () => {
   );
 
   return (
-    <div className="d-flex justify-content-center flex-column gap-5">
-      <div className="d-flex justify-content-between align-items-center">
+    <div className="d-flex justify-content-center flex-column gap-2">
+      <div className="d-flex justify-content-between align-items-center mt-4">
         <h2>{t("market-title")}</h2>
         <LinkButton>See All Coins</LinkButton>
       </div>
-
       <Row>
-        <Col  className="d-flex align-items-center flex-wrap gap-2 d-inline">
+        <Col className="d-flex align-items-center flex-wrap gap-2 d-inline">
           {marketNavs.map((item) => (
             <NavList
               key={item}

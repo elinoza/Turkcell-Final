@@ -29,7 +29,6 @@ function NavBar() {
   const pathname = usePathname();
   const { theme, setTheme } = useThemeStore();
 
-  
   const toggleTheme = () => {
     const newTheme = theme === "dark" ? "light" : "dark";
     setTheme(newTheme);
@@ -38,24 +37,24 @@ function NavBar() {
   return (
     <Navbar
       expand="xl"
-      className="bg-transparent py-0 my-0"
-      style={{ minHeight: "50px" }}
+      className="bg-transparent py-0 px-0 my-0"
+      style={{maxHeight:"50px"}}
     >
-      <Container fluid>
-        <Navbar.Brand className="p-0">
+      <Container fluid className="px-0">
+        <Navbar.Brand className="p-1 ms-6">
           <Logo />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
+        <Navbar.Collapse  id="navbarScroll">
           <Nav
-            className="me-auto my-2 my-lg-0"
+            className="me-auto py-0 px-0 my-lg-0 mx-3 gap-5"
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
             <Nav.Link
               onClick={goToHomePage}
               className={clsx(
-                pathname === ROUTE.HOME_PAGE && "bg-primary text-content-100"
+                pathname === ROUTE.HOME_PAGE && "bg-primary px-3 py-2 text-content-100"
               )}
             >
               {t("HOME_PAGE")}
@@ -64,7 +63,7 @@ function NavBar() {
             <Nav.Link
               onClick={goToBuyCripto}
               className={clsx(
-                pathname === ROUTE.BUY_CRIPTO && "bg-primary text-content-100"
+                pathname === ROUTE.BUY_CRIPTO && "bg-primary px-3 py-2 text-content-100"
               )}
             >
               {t("BUY_CRIPTO")}
@@ -73,7 +72,7 @@ function NavBar() {
             <Nav.Link
               onClick={goToMarkets}
               className={clsx(
-                pathname === ROUTE.MARKETS && "bg-primary text-content-100"
+                pathname === ROUTE.MARKETS && "bg-primary px-3 py-2 text-content-100"
               )}
             >
               {t("MARKETS")}
@@ -82,7 +81,7 @@ function NavBar() {
             <Nav.Link
               onClick={goToExchange}
               className={clsx(
-                pathname === ROUTE.EXCHANGE && "bg-primary text-content-100"
+                pathname === ROUTE.EXCHANGE && "bg-primary px-3 py-2 text-content-100"
               )}
             >
               {t("EXCHANGE")}
@@ -91,7 +90,7 @@ function NavBar() {
             <Nav.Link
               onClick={goToSpot}
               className={clsx(
-                pathname === ROUTE.SPOT && "bg-primary text-content-100"
+                pathname === ROUTE.SPOT && "bg-primary px-3 py-2 text-content-100"
               )}
             >
               {t("SPOT")}
@@ -100,18 +99,27 @@ function NavBar() {
             <Nav.Link
               onClick={goToBITUSDT}
               className={clsx(
-                pathname === ROUTE.BITUSDT && "bg-primary text-content-100"
+                pathname === ROUTE.BITUSDT && "bg-primary px-3 py-2 text-content-100"
               )}
             >
               {t("BITUSDT")}
             </Nav.Link>
+
+            <Nav.Link
+              onClick={goToBITUSDT}
+              className={clsx(
+                pathname === ROUTE.BITUSDT && "bg-primary px-3 py-2 text-content-100"
+              )}
+            >
+              {t("PAGES")}
+            </Nav.Link>
           </Nav>
 
-          <Nav className="d-flex">
+          <Nav className="d-flex gap-5 me-6">
             <Nav.Link
               onClick={goToAssets}
               className={clsx(
-                pathname === ROUTE.ASSETS && "bg-primary text-content-100"
+                pathname === ROUTE.ASSETS && "bg-primary px-3 py-2 text-content-100"
               )}
             >
               {t("ASSETS")}
@@ -121,28 +129,26 @@ function NavBar() {
               onClick={goToOrdersTrades}
               className={clsx(
                 pathname === ROUTE.ORDERS_TRADES &&
-                  "bg-primary text-content-100"
+                  "bg-primary px-3 py-2 text-content-100"
               )}
             >
               {t("ORDERS_TRADES")}
             </Nav.Link>
 
             <Nav.Link>{t("CURRENCY")}</Nav.Link>
-
-            <Nav.Link onClick={toggleTheme}>
+            <div className="d-flex"> <Nav.Link onClick={toggleTheme}>
               {theme === "light" ? (
-                <Icon name="sun" className="border-start border-end px-2" />
+                <Icon name="sun" className="border-start border-end px-1" />
               ) : (
-                <Icon name="moon" className="border-start border-end px-2" />
+                <Icon name="moon" className="border-start border-end px-1" />
               )}
             </Nav.Link>
+            <Nav.Link>
+              <Icon name="bell" className="ps-1" />
+            </Nav.Link></div>
 
             <Nav.Link>
-              <Icon name="bell" />
-            </Nav.Link>
-
-            <Nav.Link>
-              <ButtonDefault className="btn-outline-dark">
+              <ButtonDefault className="btn-outline-dark btn-sm ">
                 {t("WALLET")}
               </ButtonDefault>
             </Nav.Link>
@@ -150,10 +156,10 @@ function NavBar() {
             <Nav.Link
               onClick={goToProfile}
               className={clsx(
-                pathname === ROUTE.PROFILE && "bg-primary text-content-100"
+                pathname === ROUTE.PROFILE && "bg-primary px-3 py-2 text-content-100"
               )}
             >
-              <Avatar imgUrl="/IMG.svg" />
+              <Avatar imgUrl="/IMG.png" size={30}/>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

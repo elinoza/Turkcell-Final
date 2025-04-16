@@ -48,7 +48,7 @@ function MarketTable({ data }:{ data:any}) {
         </tr>
       </thead>
       <tbody>
-        {data.map((coin: CoinData, i:number) => {
+        {data.slice(0,8).map((coin: CoinData, i:number) => {
           const isFavorite = favoriteCoins.includes(coin.symbol);
 
           return (

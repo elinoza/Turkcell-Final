@@ -17,7 +17,7 @@ const CryptoCard = ({ coin }: CryptoCardProps) => {
     <div
       className={clsx(
         isPositive && "shadow-sm",
-        "rounded py-4 px-4 d-flex flex-column gap-3 w-100"
+        "rounded py-2 px-8 d-flex flex-column gap-3 w-100"
       )}
     >
       <div className="currency-logo-group d-flex gap-2 align-items-center">

@@ -18,9 +18,9 @@ const NavList = ({ item, selectedKey, setSelectedKey,parentKey,location }: NavLi
   return (
     <>
       {item=== selectedKey ? (
-        <PrimaryButton className="btn">{t(`${parentKey}.${item}`)}</PrimaryButton>
+        <PrimaryButton className="px-4">{t(`${parentKey}.${item}`)}</PrimaryButton>
       ) : (
-        <ButtonDefault className="text-secondary" onClick={() => setSelectedKey(item)}>
+        <ButtonDefault className="text-secondary px-4" onClick={() => setSelectedKey(item)}>
           {t(`${parentKey}.${item}`)}
         </ButtonDefault>
       )}

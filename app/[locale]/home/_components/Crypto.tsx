@@ -33,8 +33,8 @@ const Crypto = () => {
   }, []);
 
   return (
-    <Container className="bg-body rounded px-5 shadow">
-      <div className="d-flex align-items-center justify-content-start border-bottom py-3 flex-wrap">
+    <Container className="bg-body rounded px-5 shadow mt-9">
+      <div className="d-flex align-items-center justify-content-start border-bottom py-3 flex-wrap ">
         {cryptoList.map((item) => (
           <NavList
             key={item}
@@ -47,7 +47,7 @@ const Crypto = () => {
         ))}
       </div>
       <div
-        className="d-flex flex-row gap-3 py-4 overflow-auto"
+        className="d-flex flex-row gap-3 py-4 overflow-auto mt-3 "
         style={{ scrollbarWidth: "none" }}
       >
         {marketData.slice(0, 10).map((coin:CoinData) => (
