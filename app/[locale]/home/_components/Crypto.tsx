@@ -9,7 +9,7 @@ import { CoinData } from "@/constants/types";
 
 const Crypto = () => {
   const [selectedKey, setSelectedKey] = useState<string>("CRYPTO");
-  const [marketData, setMarketData] = useState<any[]>([]); // tip vermiyoruz şimdilik
+  const [marketData, setMarketData] = useState<any[]>([]);
 
   const cryptoList = [
     "CRYPTO",

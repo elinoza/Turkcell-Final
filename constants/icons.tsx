@@ -95,5 +95,22 @@ bell: (
 </clipPath>
 </defs>
 </svg>
+      ),
+      turnAround:(
+
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="32" height="32" rx="16" fill="#F7F7F7"/>
+<g clipPath="url(#clip0_2680_36959)">
+<path d="M19.332 8.6665L21.9987 11.3332L19.332 13.9998" stroke="#777E90" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M10 15.3335V14.0002C10 13.2929 10.281 12.6146 10.781 12.1145C11.2811 11.6144 11.9594 11.3335 12.6667 11.3335H22" stroke="#777E90" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M12.6667 23.3333L10 20.6667L12.6667 18" stroke="#777E90" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M22 16.6665V17.9998C22 18.7071 21.719 19.3854 21.219 19.8855C20.7189 20.3856 20.0406 20.6665 19.3333 20.6665H10" stroke="#777E90" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_2680_36959">
+<rect width="16" height="16" fill="white" transform="translate(8 8)"/>
+</clipPath>
+</defs>
+</svg>
       )
 };

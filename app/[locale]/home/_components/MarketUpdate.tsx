@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import NavList from "./NavList";
 import { useTranslations } from "next-intl";
@@ -8,12 +7,13 @@ import { getMarketList } from "@/app/utils/queries";
 import LinkButton from "@/app/_components/ui/Buttons/LinkButton";
 import SearchInput from "@/app/_components/ui/SearchInput";
 import { Col, Row } from "react-bootstrap";
+import { useMarketStore } from "../../store/MarketStore";
 
 const MarketUpdate = () => {
   const t = useTranslations("HomePage");
   const [selectedKey, setSelectedKey] = useState<string>("view-all");
-  const [marketData, setMarketData] = useState<any[]>([]);
   const [search, setSearch] = useState<string>("");
+  const {setMarketData,marketData} =useMarketStore()
 
   const marketNavs = [
     "view-all",

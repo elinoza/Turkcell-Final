@@ -5,8 +5,6 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { DM_Sans } from "next/font/google";
 import "./styles/main.scss";
-import NavBar from "./components/templates/NavBar";
-import Footer from "./components/templates/Footer";
 import { ThemeProvider } from "./components/templates/ThemeProvider";
 
 const dmSans = DM_Sans({
@@ -34,6 +32,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }>) {
+  
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -64,7 +63,7 @@ export default async function RootLayout({
           
       <body className={`${dmSans.className}`}>
       <ThemeProvider />
-        <NextIntlClientProvider> <NavBar/>{children}<Footer/></NextIntlClientProvider>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

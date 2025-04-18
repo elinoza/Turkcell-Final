@@ -1,3 +1,4 @@
+"use client"
 import PrimaryButton from "@/app/_components/ui/Buttons/PrimaryButton";
 import React from "react";
 import Partners from "./Partners";

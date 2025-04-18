@@ -1,4 +1,4 @@
-"use client";
+
 import React from "react";
 import Slider from "./_components/Slider";
 import Crypto from "./_components/Crypto";
@@ -10,7 +10,8 @@ import Rockie from "./_components/WhatIsRockie";
 import DownloadInfo from "./_components/DownloadInfo";
 import CallToAction from "./_components/CallToAction";
 
-const page = () => {
+const page = async () => {
+
   return (
     <main>
       <section className="position-relative py-3 ">

@@ -2,7 +2,7 @@ import clsx from "clsx";
 import BaseButton from "./BaseButton";
 
 export type ButtonProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 } &React.ButtonHTMLAttributes<HTMLButtonElement>
 

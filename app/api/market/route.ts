@@ -1,4 +1,4 @@
-// app/api/market/route.ts
+
 import { NextResponse } from "next/server";
 import fetchService from "@/app/utils/Service";
 

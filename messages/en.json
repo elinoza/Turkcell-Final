@@ -19,24 +19,24 @@
       "OPENSEAS": "Openseas",
       "MAKERSPLACE": "Makersplace"
     },
-      "market-title": "Market Update",
-      "market-navs": {
-        "view-all": "View All",
-        "metaverse": "Metaverse",
-        "entertainment": "Entertainment",
-        "energy": "Energy",
-        "nft": "NFT",
-        "gaming": "Gaming",
-        "music": "Music"
-      },
-      "market-cols": {
-        "name": "Name",
-        "last-price": "Last Price",
-        "24h%": "24h %",
-        "market-cap": "Market Cap",
-        "last-7-days": "Last 7 Days",
-        "trade":"Trade"
-      },
+    "market-title": "Market Update",
+    "market-navs": {
+      "view-all": "View All",
+      "metaverse": "Metaverse",
+      "entertainment": "Entertainment",
+      "energy": "Energy",
+      "nft": "NFT",
+      "gaming": "Gaming",
+      "music": "Music"
+    },
+    "market-cols": {
+      "name": "Name",
+      "last-price": "Last Price",
+      "24h%": "24h %",
+      "market-cap": "Market Cap",
+      "last-7-days": "Last 7 Days",
+      "trade": "Trade"
+    },
     "How-it-works": {
       "step1": {
         "step": "Step 1",
@@ -161,6 +161,31 @@
       "blog": "Blog",
       "careers": "Careers",
       "businessContacts": "Business Contacts"
+    }
+  },
+  "TradePage": {
+    "BuySellNavs": {
+      "limit": "Limit",
+      "market": "Market",
+      "stopLimit": "Stop limit",
+      "stopMarket": "Stop market"
+    },
+    "buttons": {
+      "buy": "Buy",
+      "sell": "Sell"
+    },
+    "orderNavs": {
+      "order-history": "Order History",
+      "open-orders": "Open Orders",
+      "closed-orders": "Closed Orders"
+    },
+    "orderCols": {
+      "date": "Date",
+      "pair": "Pair",
+      "buy/sell": "Buy/Sell",
+      "price": "Price",
+      "excuted": "Excuted",
+      "total": "Total"
     }
   }
 }

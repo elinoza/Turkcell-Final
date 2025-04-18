@@ -19,3 +19,6 @@ export type CoinData = {
     };
   };
 };
+export type MarketType ={
+  marketData:CoinData[]
+}

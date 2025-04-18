@@ -18,6 +18,10 @@ $decorative-color-end: #8444d4;
   background-color: $dark-surface;
 }
 
+[data-bs-theme="dark"] .dashboard {
+  .bg-body{background-color: $dark-surface!important}
+
+}
 
 [data-bs-theme="dark"] .text-secondary {
   color: $light !important;

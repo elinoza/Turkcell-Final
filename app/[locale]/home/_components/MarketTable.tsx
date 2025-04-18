@@ -1,9 +1,9 @@
 import ButtonDefault from "@/app/_components/ui/Buttons/ButtonDefault";
+import CryptoLogo from "@/app/_components/ui/CryptoLogo";
 import Icon from "@/app/_components/ui/Icon";
 import { CoinData } from "@/constants/types";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import React, { useState } from "react";
 import Table from "react-bootstrap/Table";
 
@@ -58,21 +58,7 @@ function MarketTable({ data }:{ data:any}) {
               </td>
               <td>{i + 1}</td>
               <td className="d-flex gap-1 align-items-center ">
-              <span
-                    className="rounded-circle crypto-icon d-inline overflow-hidden bg-secondary2 d-flex justify-content-center align-items-center"
-                    
-                  >
-                    <Image
-                      src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${coin.id}.png`}
-                      alt={`${coin.symbol} logo`}
-                      width={24}
-                      height={24}
-                      className="w-100 h-100"
-                      onError={(e) => {
-                        e.currentTarget.style.display = "none";
-                      }}
-                    />
-                  </span>
+        <CryptoLogo coinId={coin.id} coinSymbol={coin.symbol}/>
                 <span className="pe-2 border-end fw-bold">{coin.name}</span>
                 <span className="ps-2 text-secondary caption1 fw-bold">
                   {coin.symbol}

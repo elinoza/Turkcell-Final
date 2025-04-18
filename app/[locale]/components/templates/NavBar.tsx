@@ -136,6 +136,7 @@ function NavBar() {
             </Nav.Link>
 
             <Nav.Link>{t("CURRENCY")}</Nav.Link>
+            
             <div className="d-flex"> <Nav.Link onClick={toggleTheme}>
               {theme === "light" ? (
                 <Icon name="sun" className="border-start border-end px-1" />
