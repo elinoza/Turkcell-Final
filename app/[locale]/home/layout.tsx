@@ -13,8 +13,7 @@ export async function generateMetadata({
   return generatePageMetadata({
     title: t("home.title"),
     description: t("home.description"),
-    locale:locale,
-
+    locale: locale,
   });
 }
 
@@ -23,9 +22,5 @@ export default async function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <>
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }
