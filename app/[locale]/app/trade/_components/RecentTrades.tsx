@@ -1,46 +1,23 @@
 "use client";
+import DisplayTable from "./DisplayTable";
 
-const fakeOrderBook = {
-    asks: [
-      { price: 38210.75, quantity: 0.6, amount: 38210.75 * 0.6 }, 
-      { price: 38220.1, quantity: 1.3, amount: 38220.1 * 1.3 },   
-      { price: 38230.5, quantity: 0.7, amount: 38230.5 * 0.7 },   
-      { price: 38230.5, quantity: 1.1, amount: 38230.5 * 1.1 },   
-      { price: 38230.5, quantity: 0.9, amount: 38230.5 * 0.9 },   
-    ],
-    bids: [
-      { price: 38200.25, quantity: 0.8, amount: 38200.25 * 0.8 }, 
-      { price: 38190.15, quantity: 1.1, amount: 38190.15 * 1.1 }, 
-      { price: 38185.5, quantity: 0.5, amount: 38185.5 * 0.5 },   
-      { price: 38190.15, quantity: 1.4, amount: 38190.15 * 1.4 }, 
-      { price: 38190.15, quantity: 1.3, amount: 38190.15 * 1.3 },
-    ],
-  };
-
+const fakeRecentTrades = [
+    { time: "14:22:30", quantity: 38215.5, amount: 0.3 },
+    { time: "14:21:50", quantity: 38217.9, amount: 0.6 },
+    { time: "14:21:20", quantity: 38210.0, amount: 0.45 },
+    { time: "14:20:40", quantity: 38205.2, amount: 0.25 },
+    { time: "14:20:10", quantity: 38208.7, amount: 0.9 },
+  ];
 const RecentTrades = () => {
   return (
-    <div className="d-flex flex-column gap-2">
-      <h5 className="fw-bold">Order Book</h5>
-      <div className="d-flex justify-content-between text-secondary body2 fw-bold">
-        <span>Price(BTC)</span>
-        <span>Amount(ETH)</span>
-        <span>Total(BTC)</span>
-      </div>
-      {Object.entries(fakeOrderBook).map(([side, orders]) => (
-  <div key={side}>
-    {orders.map((order, i) => (
-      <div
-        key={i}
-        className={`d-flex justify-content-between body3 fw-bold ${
-          side === "bids" ? "text-success" : "text-critical"
-        }`}
-      >
-        <span>{order.price}</span>
-        <span>{order.quantity}</span>
-      </div>
-    ))}
-  </div>
-))}
+    <div className="d-flex flex-column gap-4">
+      <h5 className="fw-bold pb-3 border-bottom">Recent Trades</h5>
+      <DisplayTable
+        parentKey="recent-trades"
+        data={fakeRecentTrades}
+        columns={["time", "price", "amount"]}
+        translationPage="TradePage"
+      />
     </div>
   );
 };

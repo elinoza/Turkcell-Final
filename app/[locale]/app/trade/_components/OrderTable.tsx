@@ -38,7 +38,7 @@ function OrderTable({ orderHistory }: { orderHistory: any }) {
       
           return (
             <tr key={order.orderId}>
-              <td className="text-secondary">{date}</td>
+              <td className="text-secondary">{date && date}</td>
       
               <td className="fw-bold">
                 {order.symbol.slice(0, -4)}/{order.symbol.slice(-4)}

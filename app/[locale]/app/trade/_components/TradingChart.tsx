@@ -13,8 +13,6 @@ const TradingChart = () => {
   useEffect(() => {
     if (!containerRef.current) return;
 
- 
-
     const script = document.createElement("script");
     script.src = "https://s3.tradingview.com/tv.js";
     script.async = true;
@@ -32,6 +30,7 @@ const TradingChart = () => {
           enable_publishing: false,
           allow_symbol_change: true,
           container_id: "tradingview-chart",
+          
         });
       }
     };

@@ -186,6 +186,26 @@
       "price": "Price",
       "excuted": "Excuted",
       "total": "Total"
-    }
+    },
+    "coin-tabs":{
+      "BTC":"BTC",
+      "ETH":"ETH",
+      "USDT":"USDT"
+    },
+    "order-book":{
+      "price":"Price",
+      "quantity":"Amount",
+      "amount":"Total"
+    },
+"recent-trades":{
+  "time":"Time",
+  "price":"Price",
+  "amount":"Amount"
+},
+"coins":{
+  "pair":"Pair",
+  "last-price":"Last Price",
+  "change":"Change"
+}
   }
 }

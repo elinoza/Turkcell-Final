@@ -6,9 +6,9 @@ import React from "react";
 
 type NavListProps = {
   item: string;
-  selectedKey: string;
-  parentKey:string;
-  location:string;
+  selectedKey?: string;
+  parentKey?:string;
+  location?:string;
   setSelectedKey: (key: string) => void;
 };
 
@@ -18,10 +18,10 @@ const NavList = ({ item, selectedKey, setSelectedKey,parentKey,location }: NavLi
   return (
     <>
       {item=== selectedKey ? (
-        <PrimaryButton className="px-4">{t(`${parentKey}.${item}`)}</PrimaryButton>
+        <PrimaryButton className="px-4">{t(`${parentKey}.${item}`) || item}</PrimaryButton>
       ) : (
         <ButtonDefault className="text-secondary px-4" onClick={() => setSelectedKey(item)}>
-          {t(`${parentKey}.${item}`)}
+          {t(`${parentKey}.${item}`)|| item}
         </ButtonDefault>
       )}
     </>
