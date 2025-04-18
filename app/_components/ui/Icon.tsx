@@ -1,6 +1,5 @@
 import { ICONS } from "../../../constants/icons";
 import { IconProps } from "../../../constants/types";
-import NotFound from "../errorHandlings/notFound";
 import clsx from "clsx";
 
 const Icon = ({
@@ -12,7 +11,7 @@ const Icon = ({
   const iconSVG = ICONS[name];
 
   return !iconSVG ? (
-    <NotFound />
+  <span>icon not found</span>
   ) : (
     <span
       className={clsx("icon centered-aligned-flex-row m-0 p-0 text-green", onClick && "cursor-pointer", className)}

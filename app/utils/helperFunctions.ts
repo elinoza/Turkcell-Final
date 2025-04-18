@@ -24,4 +24,12 @@ export const coinToMoney = (
     const result = isSell ? payAmount * toRatePrice : payAmount / toRatePrice;
     return result;
   };
+
+
+  export const formatNumber = (value: number, options?: Intl.NumberFormatOptions) =>
+    new Intl.NumberFormat("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+      ...options,
+    }).format(value);
   

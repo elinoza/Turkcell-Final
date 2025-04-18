@@ -3,9 +3,9 @@
     "title": "Merhaba dünya!",
     "about": "Hakkında sayfasına git",
     "slider": {
-      "title": "Dijital Varlıkları Roketle Al & Sat",
-      "content": "Coin rocket, kripto varlık alış ve satış işlemleri için en kolay, en güvenli ve en hızlı yoldur.",
-      "start-button": "Hemen başla",
+      "title": "Dijital Varlıkları Rokette Al & Sat",
+      "content": "Coin rocket, kripto varlık alım satımı için en kolay, en güvenli ve en hızlı yoldur.",
+      "start-button": "Hemen Başla",
       "partners": "Ortaklarımız"
     },
     "Crypto-list": {
@@ -21,7 +21,7 @@
     },
     "market-title": "Piyasa Güncellemesi",
     "market-navs": {
-      "view-all": "Tümünü Görüntüle",
+      "view-all": "Tümünü Gör",
       "metaverse": "Metaverse",
       "entertainment": "Eğlence",
       "energy": "Enerji",
@@ -35,77 +35,77 @@
       "24h%": "24s %",
       "market-cap": "Piyasa Değeri",
       "last-7-days": "Son 7 Gün",
-      "trade": "Ticaret"
+      "trade": "İşlem Yap"
     },
     "How-it-works": {
       "step1": {
         "step": "Adım 1",
         "title": "İndir",
-        "content": "Stacks, React Native ile oluşturulmuş üretime hazır bir içerik blokları kütüphanesidir."
+        "content": "Stacks, React Native ile oluşturulmuş, yığınlanabilir içerik bloklarından oluşan üretime hazır bir kütüphanedir."
       },
       "step2": {
         "step": "Adım 2",
         "title": "İndir",
-        "content": "Stacks, React Native ile oluşturulmuş üretime hazır bir içerik blokları kütüphanesidir."
+        "content": "Stacks, React Native ile oluşturulmuş, yığınlanabilir içerik bloklarından oluşan üretime hazır bir kütüphanedir."
       },
       "step3": {
         "step": "Adım 3",
-        "title": "Ticarete Başla",
-        "content": "Stacks, React Native ile oluşturulmuş üretime hazır bir içerik blokları kütüphanesidir."
+        "title": "Alım Satıma Başla",
+        "content": "Stacks, React Native ile oluşturulmuş, yığınlanabilir içerik bloklarından oluşan üretime hazır bir kütüphanedir."
       },
       "step4": {
         "step": "Adım 4",
         "title": "Para Kazan",
-        "content": "Stacks, React Native ile oluşturulmuş üretime hazır bir içerik blokları kütüphanesidir."
+        "content": "Stacks, React Native ile oluşturulmuş, yığınlanabilir içerik bloklarından oluşan üretime hazır bir kütüphanedir."
       }
     },
     "rockie": {
-      "title": "Rockie Nedir",
-      "description": "Bitcost'ta çeşitli ticaret deneyimleri yaşayın. Spot Ticaret, Vadeli İşlem, P2P, Stake Etme, Madencilik ve Marjin gibi çeşitli kripto işlemleri yapabilirsiniz.",
+      "title": "Rockie Nedir?",
+      "description": "Bitcost'ta çeşitli işlem türlerini deneyimleyin. Spot İşlem, Vadeli İşlem, P2P, Stake, Madencilik ve Marjin gibi birçok işlem türünü kullanabilirsiniz.",
       "features": {
         "realtimePrices": {
-          "title": "Gerçek zamanlı kripto para fiyatlarını görüntüleyin",
-          "description": "Bitcost'ta çeşitli ticaret deneyimleri yaşayın. Spot Ticaret, Vadeli İşlem, P2P, Stake Etme, Madencilik ve Marjin gibi çeşitli kripto işlemleri yapabilirsiniz."
+          "title": "Gerçek zamanlı kripto fiyatlarını görüntüle",
+          "description": "Bitcost'ta çeşitli işlem türlerini deneyimleyin. Spot İşlem, Vadeli İşlem, P2P, Stake, Madencilik ve Marjin gibi birçok işlem türünü kullanabilirsiniz."
         },
         "buySellCoins": {
-          "title": "BTC, ETH, XRP, OKB ve daha fazlasını alıp satın",
-          "description": "Bitcost'ta çeşitli ticaret deneyimleri yaşayın. Spot Ticaret, Vadeli İşlem, P2P, Stake Etme, Madencilik ve Marjin gibi çeşitli kripto işlemleri yapabilirsiniz."
+          "title": "BTC, ETH, XRP, OKB, vb. al ve sat",
+          "description": "Bitcost'ta çeşitli işlem türlerini deneyimleyin. Spot İşlem, Vadeli İşlem, P2P, Stake, Madencilik ve Marjin gibi birçok işlem türünü kullanabilirsiniz."
         }
       },
-      "button": "Daha Fazla Keşfet"
+      "button": "Daha Fazlasını Keşfet"
     },
-    "hero": {
-      "title": "Paranı Özgür Bırak & Güvenle Yatırım Yap",
-      "description": "Cryptor Trade ile ticaret becerilerinizi en iyi şekilde kullanın",
+    "app": {
+      "title": "Paranı Özgürleştir & Güvenle Yatırım Yap",
+      "description": "Cryptor Trade ile, işlem becerilerinin en iyi şekilde değerlendirildiğinden emin olabilirsin",
       "features": {
         "trade": {
-          "title": "Hareket Halindeyken Al, Sat ve Ticaret Yap",
-          "description": "Varlıklarınızı mobil cihazınızdan yönetin"
+          "title": "Her Yerden Al, Sat ve Takas Yap",
+          "description": "Varlıklarını Mobil Cihazından Yönet"
         },
         "control": {
-          "title": "Varlıklarının Kontrolü Senin Elinde",
-          "description": "Sadece senin fonlarına erişimin olduğundan emin ol"
+          "title": "Varlıklarının Kontrolünü Ele Al",
+          "description": "Yalnızca Senin Erişimin Olduğuna Emin Olabilirsin"
         }
       },
       "buttons": {
-        "google": "Google Play'den Al",
-        "apple": "App Store'dan İndir"
+        "google": "Google Play’den Al",
+        "apple": "App Store’dan İndir"
       }
     },
     "testimonials": {
-      "title": "Müşterilerimiz Yaptığımız İşleri Seviyor",
-      "content": "Fikrinizi Finsweet ile Gerçeğe Dönüştürün",
-      "description": "Bir okuyucunun, sayfanın yerleşimini incelerken içeriğe odaklanmadan dikkatinin dağılması uzun zamandır bilinen bir gerçektir.",
+      "title": "Müşterilerimiz Bizimle Ne Kadar Mutlu",
+      "content": "Fikrinizi Gerçeğe Dönüştürün – Finsweet ile",
+      "description": "Bir sayfanın düzenine bakarken dikkat dağıtıcı okunabilir içerik olması uzun süredir bilinen bir gerçektir.",
       "reviewsCount": "Müşteri Yorumları",
       "testimonial": {
-        "quote": "Harika bir kurs, gerçekten çok beğendim ve kursun kod açıklamaları çok iyiydi, her şeyi kolayca anlayıp öğrendiklerimle uygulamalar geliştirebildim.",
+        "quote": "Harika bir kurstu, çok keyif aldım ve kod açıklamaları oldukça iyiydi. Kolayca anladım ve öğrendiklerimle uygulamalar geliştirebildim.",
         "author": "Johnny Andro",
         "position": "Direktör, Şirket",
         "company": "logoipsum"
       },
       "cta": {
-        "title": "25$’a kadar kripto kazanın",
-        "subtitle": "Belirli kripto paraların nasıl çalıştığını keşfedin — ve her birinden biraz alarak kendiniz deneyin.",
+        "title": "25$'a kadar kripto kazan",
+        "subtitle": "Bazı kripto paraların nasıl çalıştığını öğren — ve her birini denemen için biraz kazan.",
         "button": "Hesap Oluştur"
       }
     }
@@ -130,12 +130,12 @@
     "talk-caption": "Haydi konuşalım! 🤙",
     "tel-number": "+90 902 353 2926",
     "mail": "sinahosseini379@gmail.com",
-    "copyright": "Telif Hakkı © 2022 Tüm Dünya İnsanlarına Ücretsiz",
+    "copyright": "Telif Hakkı © 2022 Tüm Dünya İnsanları İçin Ücretsiz",
     "products": {
       "caption": "ÜRÜNLER",
       "spot": "Spot",
-      "usdtPerpetual": "USDT Vadeli",
-      "inversePerpetual": "Ters Vadeli",
+      "usdtPerpetual": "USDT Sürekli",
+      "inversePerpetual": "Ters Sürekli",
       "launchpad": "Launchpad",
       "exchange": "Borsa"
     },
@@ -144,13 +144,13 @@
       "buyCrypto": "Kripto Satın Al",
       "referralProgram": "Referans Programı",
       "affiliateProgram": "Ortaklık Programı",
-      "apiDocumentation": "API Dökümantasyonu"
+      "apiDocumentation": "API Dokümantasyonu"
     },
     "support": {
       "caption": "DESTEK",
       "helpCenter": "Yardım Merkezi",
       "submitRequest": "Talep Gönder",
-      "authenticityCheck": "Kimlik Doğrulama",
+      "authenticityCheck": "Orijinallik Kontrolü",
       "userFeedback": "Kullanıcı Geri Bildirimi",
       "tradingFee": "İşlem Ücreti"
     },
@@ -161,6 +161,51 @@
       "blog": "Blog",
       "careers": "Kariyer",
       "businessContacts": "İş İletişimleri"
+    }
+  },
+  "TradePage": {
+    "BuySellNavs": {
+      "limit": "Limit",
+      "market": "Piyasa",
+      "stopLimit": "Durdurma Limiti",
+      "stopMarket": "Piyasa Durdur"
+    },
+    "buttons": {
+      "buy": "Al",
+      "sell": "Sat"
+    },
+    "orderNavs": {
+      "order-history": "Emir Geçmişi",
+      "open-orders": "Açık Emirler",
+      "closed-orders": "Kapanmış Emirler"
+    },
+    "orderCols": {
+      "date": "Tarih",
+      "pair": "Parite",
+      "buy/sell": "Al/Sat",
+      "price": "Fiyat",
+      "excuted": "Gerçekleşen",
+      "total": "Toplam"
+    },
+    "coin-tabs": {
+      "BTC": "BTC",
+      "ETH": "ETH",
+      "USDT": "USDT"
+    },
+    "order-book": {
+      "price": "Fiyat",
+      "quantity": "Miktar",
+      "amount": "Tutar"
+    },
+    "recent-trades": {
+      "time": "Zaman",
+      "price": "Fiyat",
+      "amount": "Miktar"
+    },
+    "coins": {
+      "pair": "Parite",
+      "last-price": "Son Fiyat",
+      "change": "Değişim"
     }
   }
 }

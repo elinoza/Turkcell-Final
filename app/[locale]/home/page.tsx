@@ -1,56 +1,64 @@
+import { Container, Row, Col } from "react-bootstrap";
+import TradingChart from "../../_components/ui/Charts/TradingChart";
+import BuySellPanel from "./_components/BuySellPanel";
+import { getOrderHistory, getTestnetBalance } from "../../utils/actions";
+import BalancePanel from "./_components/BalancePanel";
+import OrderTable from "./_components/OrderTable";
+import OrderNavs from "./_components/OrderNavs";
+import OrderBook from "./_components/OrderBook";
+import RecentTrades from "./_components/RecentTrades";
+import CoinList from "./_components/CoinList";
 
-import React from "react";
-import Slider from "./_components/Slider";
-import Crypto from "./_components/Crypto";
-import { Container } from "react-bootstrap";
-import MarketUpdate from "./_components/MarketUpdate";
-import Testimonials from "./_components/Testimonials";
-import HowItWorks from "./_components/HowItWork";
-import Rockie from "./_components/WhatIsRockie";
-import DownloadInfo from "./_components/DownloadInfo";
-import CallToAction from "./_components/CallToAction";
-
-const page = async () => {
+const TradePage = async () => {
+  const balances = await getTestnetBalance();
+  const orderHistory = await getOrderHistory("BTCUSDT");
 
   return (
-    <main>
-      <section className="position-relative py-3 ">
-        <div className="position-absolute top-0 start-0 end-0 bg-surface w-100 h-75"></div>
-        <Container className="position-relative">
-          <Slider />
-          <Crypto />
-        </Container>
-      </section>
-      <section>
-        <Container className="mt-9">
-          <MarketUpdate />
-        </Container>
-      </section>
-      <section className="py-5 my-4 bg-surface">
-        <Container>
-          <HowItWorks />
-        </Container>
-      </section>
-      <section className="py-9 my-4">
-        <Container>
-          <Rockie />
-        </Container>
-      </section>
-      <section className="py-5 my-4">
-        <Container>
-          <DownloadInfo />
-        </Container>
-      </section>
-      <section className="py-5 my-4">
-        <Container>
-          <Testimonials />
-        </Container>
-      </section>
-      <section>
-        <CallToAction />
-      </section>
-    </main>
+    <Container fluid className="dashboard py-4 bg-surface">
+      <Row className="mb-4">
+        <Col>
+          <div className="p-3 rounded bg-body shadow-sm">Pair Info Header</div>
+        </Col>
+      </Row>
+
+      <Row className="mb-4 gx-4">
+        <Col xs={12} md={8} className="d-flex flex-column gap-4">
+          <div className="p-4 rounded bg-body shadow-sm">
+            <TradingChart />
+          </div>
+          <div className="p-4 rounded bg-body shadow-sm">
+            <OrderNavs />
+            <OrderTable orderHistory={orderHistory} />
+          </div>
+          <Row className="gx-4">
+            <Col>
+              <div className="p-4 rounded bg-body shadow-sm">
+                <OrderBook />
+              </div>
+            </Col>
+            <Col>
+              <div className="p-4 rounded bg-body shadow-sm">
+                <RecentTrades />
+              </div>
+            </Col>
+          </Row>
+        </Col>
+
+        <Col xs={12} md={4} className="d-flex flex-column gap-4">
+          <div className="p-4 rounded bg-body shadow-sm">
+            <BuySellPanel />
+          </div>
+          <div className="p-4 rounded bg-body shadow-sm">
+            <BalancePanel balances={balances} />
+          </div>
+
+          <div className="p-4 rounded bg-body shadow-sm">
+            <CoinList />
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
-export default page;
+export default TradePage;

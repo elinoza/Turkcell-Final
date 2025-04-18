@@ -1,12 +1,12 @@
 $primary: #3772ff;
-$danger: #d33535; //critical
+$danger: #d33535;
 $warning: #fabe3c;
 $secondary: #777e90;
 $success: #58bd7d;
-$info: #2e72d2; //interactive;
+$info: #2e72d2; 
 $light: #b1b5c3;
 $highlight: #1e58c8;
-$dark: #23262f; //onsurface
+$dark: #23262f; 
 $surface: #f7f7f7;
 $main-surface: white;
 $dark-body-background: #141416;
@@ -15,9 +15,9 @@ $line-color:#E5E5E5;
 $line-color-dark:$dark;
 $dark-hover:#222630;
 
-$body-color: $dark; //on surface
-$body-bg: $main-surface; //surface main
-$tertiary-color: $surface; //surface
+$body-color: $dark;
+$body-bg: $main-surface; 
+$tertiary-color: $surface;
 $body-bg-dark: $dark-body-background;
 $body-color-dark: $main-surface;
 $secondary-dark:$light;
@@ -39,6 +39,7 @@ $theme-colors: (
   "surface":$surface
 
 );
+
 $border-color:$line-color;
 $border-color-dark:$line-color-dark;
 $font-weight-bold: 700;
@@ -63,34 +64,13 @@ $input-btn-font-size-sm: $font-size-sm;
 $input-btn-font-size-lg: $font-size-lg;
 $btn-font-weight: $font-weight-bold;
 $btn-line-height: 1rem;
-// $btn-padding-y: 1rem;
-// $btn-padding-x:17px;
-// $box-shadow: 0px 14px 64px -48px #0F0F0F1A;
 
-
-.nav-link{
-  color:var(--bs-body-color)!important;
-  display:flex!important;
-  justify-content:center!important;
-  align-items:center!important;
-  padding-left:0px!important;
-  padding-right:0px!important
-}
-.btn-outline-dark {
-  border-color: var(--bs-body-color)!important
-}
-.btn-outline-dark:not(:hover) {
-  color: var(--bs-body-color)!important
-}
-// $nav-link-padding-y:                .5rem;
-// $nav-link-padding-x:                1rem;
 $nav-link-font-size: $font-size-base*0.8;
  $nav-link-font-weight:$font-weight-bold;
  $link-color:$body-color;
  $navbar-color:$body-color;
 $nav-link-color:$body-color;
-// $nav-link-hover-color:              var(--#{$prefix}link-hover-color);
-// $nav-link-transition:               color .15s ease-in-out, background-col
+
 
 $spacer: 1rem;
 $spacers: (
@@ -106,66 +86,14 @@ $spacers: (
   9: $spacer * 4,
   10: $spacer * 0.75,
 );
-.bg-primary,.btn-primary {
-color: $main-surface!important}
 
 $border-radius:              1.5rem;
-// $border-radius-sm:            .25rem;
-// $border-radius-lg:            .5rem;
-// $border-radius-xl:            1rem;
-// $border-radius-xxl:           2rem;
-// $border-radius-pill:          50rem;
-
-
 $table-cell-padding-y:        1.60rem;
-// $table-cell-padding-x:        .5rem;
-// $table-cell-padding-y-sm:     .25rem;
-// $table-cell-padding-x-sm:     .25rem;
-
-// $table-cell-vertical-align:   top;
-
  $table-color:              var(--bs-body-color);
-// $table-bg:                    var(--#{$prefix}body-bg);
-// $table-accent-bg:             transparent;
-
-// $table-th-font-weight:        null;
-
-// $table-striped-color:         $table-color;
-// $table-striped-bg-factor:     .05;
-// $table-striped-bg:            rgba(var(--#{$prefix}emphasis-color-rgb), $table-striped-bg-factor);
-
-// $table-active-color:          $table-color;
-// $table-active-bg-factor:      .1;
-// $table-active-bg:             rgba(var(--#{$prefix}emphasis-color-rgb), $table-active-bg-factor);
-
-// $table-hover-color:           $table-color;
 $table-hover-bg-factor:       .075;
 $table-hover-bg:              rgba($primary, $table-hover-bg-factor);
-
-// $table-border-factor:         .2;
-// $table-border-width:          var(--#{$prefix}border-width);
-// $table-border-color:          var(--#{$prefix}border-color);
-
-// $table-striped-order:         odd;
-// $table-striped-columns-order: even;
-
-// $table-group-separator-color: currentcolor;
-
-// $table-caption-color:         var(--#{$prefix}secondary-color);
-
-// $table-bg-scale:              -80%;
-
 $btn-link-color:var(--bs-body-color);
 $btn-link-hover-color:        var(--bs-body-hover-color);
-
-// $input-btn-focus-width:         $focus-ring-width;
-// $input-btn-focus-color-opacity: $focus-ring-opacity;
-// $input-btn-focus-color:         none;
-// $input-btn-focus-blur:          $focus-ring-blur;
-// $input-btn-focus-box-shadow:    none;
-
-
-
 $container-max-widths: (
   sm: 540px,
   md: 720px,

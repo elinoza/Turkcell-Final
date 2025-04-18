@@ -101,3 +101,21 @@ tr:hover .btn {
 .search-input{
 outline:none!important
 }
+.bg-primary,.btn-primary {
+  color: $main-surface!important}
+
+  .nav-link{
+    color:var(--bs-body-color)!important;
+    display:flex!important;
+    justify-content:center!important;
+    align-items:center!important;
+    padding-left:0px!important;
+    padding-right:0px!important
+  }
+  .btn-outline-dark {
+    border-color: var(--bs-body-color)!important
+  }
+  .btn-outline-dark:not(:hover) {
+    color: var(--bs-body-color)!important
+  }
+  
