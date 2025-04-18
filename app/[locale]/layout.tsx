@@ -8,6 +8,7 @@ import "./styles/main.scss";
 import { ThemeProvider } from "../_components/ThemeProvider";
 import NavBar from "../_components/ui/Navbar/NavBar";
 import Footer from "../_components/ui/Footer/Footer";
+import { generatePageMetadata } from "../utils/seo";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -22,9 +23,12 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
-  return {
+  return generatePageMetadata({
     title: t("title"),
-  };
+    description: t("description"),
+    locale:locale,
+
+  });
 }
 
 export default async function RootLayout({

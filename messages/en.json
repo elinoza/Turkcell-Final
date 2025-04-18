@@ -110,8 +110,13 @@
       }
     }
   },
-  "Metadata": {
-    "title": "Rockie - crypto"
+ "Metadata": {
+    "title": "Cryptor Exchange - Trade with Confidence",
+    "description": "Buy, sell, and trade cryptocurrencies securely with Cryptor. Experience a seamless trading interface, real-time data, and fast transactions.",
+    "home": {
+      "title": "Your Trade Details – Cryptor Exchange",
+      "description": "Track your portfolio, check market insights, and manage your crypto trades from one place."
+    }
   },
   "Navbar": {
     "HOME_PAGE": "Homepage",

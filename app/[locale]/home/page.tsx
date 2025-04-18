@@ -8,6 +8,7 @@ import OrderNavs from "./_components/OrderNavs";
 import OrderBook from "./_components/OrderBook";
 import RecentTrades from "./_components/RecentTrades";
 import CoinList from "./_components/CoinList";
+import { Suspense } from "react";
 
 const TradePage = async () => {
   const balances = await getTestnetBalance();
@@ -24,11 +25,13 @@ const TradePage = async () => {
       <Row className="mb-4 gx-4">
         <Col xs={12} md={8} className="d-flex flex-column gap-4">
           <div className="p-4 rounded bg-body shadow-sm">
-            <TradingChart />
+          <Suspense fallback={<div>Loading Market Table...</div>} > <TradingChart /></Suspense>
+           
           </div>
           <div className="p-4 rounded bg-body shadow-sm">
             <OrderNavs />
-            <OrderTable orderHistory={orderHistory} />
+            <Suspense fallback={<div>Loading Market Table...</div>} ><OrderTable orderHistory={orderHistory} /></Suspense>
+    
           </div>
           <Row className="gx-4">
             <Col>
@@ -49,7 +52,8 @@ const TradePage = async () => {
             <BuySellPanel />
           </div>
           <div className="p-4 rounded bg-body shadow-sm">
-            <BalancePanel balances={balances} />
+          <Suspense fallback={<div>Loading Market Table...</div>} ><BalancePanel balances={balances} /></Suspense>
+            
           </div>
 
           <div className="p-4 rounded bg-body shadow-sm">

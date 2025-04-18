@@ -110,8 +110,14 @@
       }
     }
   },
-  "Metadata": {
-    "title": "Rockie - kripto"
+ "Metadata": {
+    "title": "Cryptor Borsası - Güvenle Alım Satım Yap",
+    "description": "Cryptor ile kripto para alım satım işlemlerinizi güvenle gerçekleştirin. Gerçek zamanlı veriler ve hızlı işlemlerle kesintisiz bir deneyim yaşayın.",
+    "home": {
+      "title": "Yatırımlarınızı Takip Edin – Cryptor Borsası",
+      "description": "Portföyünüzü izleyin, piyasayı analiz edin ve işlemlerinizi kolayca yönetin."
+    }
+  
   },
   "Navbar": {
     "HOME_PAGE": "Ana Sayfa",
