@@ -7,7 +7,7 @@ export async function GET() {
 
   const data = await fetchService(url, "GET", null, {
     headers: {
-      "X-CMC_PRO_API_KEY": process.env.NEXT_PUBLIC_CMC_API_KEY!,
+      "X-CMC_PRO_API_KEY": process.env.CMC_API_KEY!,
     },
     cache: "no-store",
   });
