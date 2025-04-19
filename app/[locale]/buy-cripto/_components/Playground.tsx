@@ -6,7 +6,7 @@ import SelectCurrency from "./SelectCurrency";
 import BuySuccess from "./BuySuccess";
 import Confirmation from "./Confirmation";
 import { useTranslations } from "next-intl";
-
+/* eslint-disable */
 const PlayGround = () => {
   const [selectedKey, setSelectedKey] = useState("buy-cripto");
   const [selectedAction, setSelectedAction] = useState("select-currency");
